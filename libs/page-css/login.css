@@ -1,0 +1,149 @@
+body{
+	background: #FDF8F4 url(../../sourse/img/register/login_03.jpg) no-repeat center top;
+}
+.bgcolor{
+	padding: 30px 0;
+}
+.login_center{
+	width: 1200px;
+	height: 720px;
+	font-size: 12px;
+	font-style: normal;
+	margin: 0 auto;
+}
+.login_in{
+	box-shadow: 0 0 23px rgba(0,0,0,.1);
+}
+.login_in{
+	width: 310px;
+	padding: 30px 35px;
+	margin-top: 120px;
+	background-color: #fff;
+	position: relative;
+}
+.login_in h1{
+	color: #f19108;
+	font: normal 20px/20px "microsoft yahei";
+	text-align: center;
+	margin-bottom: 24px;
+}
+.error{
+	height: auto;
+	border: 1px solid #ffac76;
+	background: #ffffcf url(../../sourse/img/login/error_tips.png) no-repeat left center;
+	padding-left: 30px;
+	line-height: 25px;
+	margin-bottom: 12px;
+	color: #ff0200;
+	display: none;
+}
+.login_in li{
+	margin-bottom: 15px;
+	width: 310px;
+}
+.login_tips{
+	position: relative;
+	z-index: 1;
+}
+.login_tips label{
+	position: absolute;
+	height: 50px;
+	line-height: 50px;
+	left: 10px;
+	top: 0;
+	color: #999;
+	cursor: text;
+}
+.login_in .in_style{
+	width: 298px;
+	height: 20px;
+	line-height: 20px;
+	padding: 14px 5px;
+	border: 1px solid #dedede;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "microsoft yahei";
+	border-radius: 0;
+	transition: border linear .2s,box-shadow linear .2s; 
+}
+.login_in .in_style:focus{
+	box-shadow: 0 1px 1px rgba(0,0,0,0.75),0 0 5px rgba(240,127,5,.4);
+}
+.login_tips i {
+	width: 15px;
+	height: 17px;
+	position: absolute;
+	right: 10px;
+	top: 16px;
+	background: url(../../sourse/img/login/login_tips.png) no-repeat;
+}
+.login_tips i.picPassWord{
+	background-position: 0 -20px;
+}
+
+/*验证码*/
+.login_in p{
+	height: 20px;
+	color: #666;
+}
+.login_in .width100{
+	width: 100px;
+}
+.yz{
+	width: 70px;
+	height: 24px;
+	margin: 13px 0 0 10px;
+	display: inline;
+}
+.login_in .marTop_8{
+	margin-top: 8px;
+}
+.change{
+	height: 20px;
+	line-height: 20px;
+	margin: 15px 0 0 10px;
+	color: #666;
+}
+/*验证码结束*/
+/*记住账号*/
+.rememberMe{
+	position: relative;
+	top: -10px;
+	left: 3px;
+	
+}
+/*立即登录按钮*/
+.login_btn{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.btn_submit{
+	padding: 9px 0 8px 0;
+	position: relative;
+}
+.input_sub{
+	width: 100%;
+	background-color: #f19108;
+	border: 0;
+	cursor: pointer;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+/*使用合作账号登录*/
+.jiathis{
+	padding-bottom: 30px;
+}
+.jiathis p{
+	color: #999;
+	padding: 5px 0;
+}
+/*不是寺库会员？*/
+.msg{
+	width: 100%;
+}
+.msg span{
+	color: #999;
+}

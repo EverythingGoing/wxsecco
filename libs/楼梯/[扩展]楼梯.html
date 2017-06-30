@@ -1,0 +1,220 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>楼梯</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			#nav {
+				width: 32px;
+				position: fixed;
+				top: 150px;
+				left: 50px;
+				border: 1px solid #ddd;
+				display: none;
+			}
+			#nav ul li {
+				width: 32px;
+				height: 32px;
+				border-bottom: 1px dotted #DDDDDD;
+				list-style: none;
+				font-size: 12px;
+				color: #666;
+				text-align: center;
+				line-height: 32px;
+				position: relative;
+				cursor: pointer;
+			}
+			#nav ul li span {
+				width: 32px;
+				height: 32px;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			#nav ul li span {
+				display: none;
+			}
+			#nav ul li.last {
+				background: #C00;
+				color: #fff;
+				border-bottom: 1px solid #ddd;
+			}
+			#nav ul li.hover span {
+				background: #c00;
+				color: #fff;
+				display: block;
+			}
+			#nav ul li.hover span.active {
+				background: #c00;
+				color: #fff;
+				display: block;
+			}
+			#nav ul li span.active {
+				background: #fff;
+				color: #c00;
+				display: block;
+			}
+			#header {
+				width: 1000px;
+				height: 1000px;
+				background: #cc6633;
+				margin: 0 auto;
+			}
+			#main {
+				width: 1000px;
+				background: #66ff66;
+				margin: 0 auto;
+			}
+			#main .floor {
+				
+				height: 600px;
+				width: 1000px;
+				font-size: 50px;
+				color: #fff;
+				font-weight: bold;
+				text-align: center;
+				line-height: 600px;
+			}
+			#footer {
+				width: 1000px;
+				height: 400px;
+				background: red;
+				margin: 0 auto;
+			}
+		</style>
+        <script src="js/jquery-1.12.0.js"></script>
+		<script>
+			$(function(){
+				/*
+					思路：
+						1）获取页面元素
+						2）滚动
+							1>滚动距离大于600，显示楼层导航，小于600时隐藏
+							2>滚动到某一楼层时，高亮显示导航对应楼层
+						3）点击楼层导航，跳转到相应楼层
+				 */
+				// 1）获取页面元素
+				//传进来几个参数 /1.楼梯实体 2.要楼层--目的地 3.修改的样式 4.被点击的楼梯层
+				function floorMove(obj){
+					var $nav = $(obj.nav);
+					var $floor = $(obj.floor);
+					// 2）滚动
+					$(window).on('scroll',function(){
+						var scrollTop = $(window).scrollTop();
+						// 1>滚动距离大于600，显示楼层导航，小于600时隐藏
+						if (scrollTop > 600) {
+						    //淡入（显示）
+							$nav.fadeIn('slow');//600
+						} else {
+						    //淡出（隐藏）
+							$nav.fadeOut('fast');//200
+						}
+	
+						// 2>滚动到某一楼层时，高亮显示导航对应楼层
+					    // 得到当前楼层的index值
+						$floor.each(function (idx, ele) {
+						    console.log($(this).offset());
+						    if (scrollTop >= $(ele).offset().top && scrollTop < ($(ele).offset().top + $(ele).outerHeight() / 2) - 100) {
+								$nav.find(obj.li).not(obj.last).removeClass(obj.active).eq(idx).addClass(obj.active);
+								// 退出循环
+								return false;
+							}
+						});
+					});
+					
+					// 3）点击楼层导航，跳转到相应楼层
+					$nav.on('click',obj.li,function(){
+						var index = $(this).index();
+						var top;
+						if($(this).hasClass(obj.last)){
+							top = 0;
+						}else{
+							top = $floor.eq(index).offset().top;
+						}
+						// $(window).scrollTop(top);
+						$('html,body').animate({scrollTop:top});
+					});					
+				}
+				floorMove({
+					nav:"#nav",
+					floor:"#main floor",
+					li:"li",
+					active:"hover",
+					last:"last",
+					floorheight0:573
+				})
+			});
+		</script>
+	</head>
+
+	<body>
+		<div id="nav">
+			<ul>
+				<li class="hover">1F <span>服饰</span> </li>
+				<li>2F <span>美妆</span> </li>
+				<li>3F <span>手机</span> </li>
+				<li>4F <span>家电</span> </li>
+				<li>5F <span>数码</span> </li>
+				<li>6F <span>运动</span> </li>
+				<li>7F <span>居家</span> </li>
+				<li>8F <span>母婴</span> </li>
+				<li>9F <span>食品</span> </li>
+				<li>10F <span>图书</span> </li>
+				<li>11F <span>服务</span> </li>
+				<li class="last">Top</li>
+			</ul>
+		</div>
+
+		<!--楼层内容开始-->
+
+		<div id="header">
+
+		</div>
+		<div id="main">
+			<div class="floor" style="background: #cc0033;">
+				服饰
+			</div>
+			<div class="floor" style="background: #999933;">
+				美妆
+			</div>
+			<div class="floor" style="background: #ccff33;">
+				手机
+			</div>
+			<div class="floor" style="background: #006633;">
+				家电
+			</div>
+			<div class="floor" style="background: #6666cc;">
+				数码
+			</div>
+			<div class="floor" style="background: #ff6600;">
+				运动
+			</div>
+			<div class="floor" style="background: #ffff00;">
+				居家
+			</div>
+			<div class="floor" style="background: #3333ff;">
+				母婴
+			</div>
+			<div class="floor" style="background: #ff00cc;">
+				食品
+			</div>
+			<div class="floor" style="background: #669900;">
+				图书
+			</div>
+			<div class="floor" style="background: #ff66cc;">
+				服务
+			</div>
+
+		</div>
+		<div id="footer">
+
+		</div>
+		<!--楼层内容结束-->
+
+	</body>
+</html>

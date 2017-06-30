@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-----css framework----->
+		
+		<!-----css auto----->
+		<link rel="stylesheet" type="text/css" href="libs/page-css/common.css"/>
+		<!--<link rel="stylesheet" type="text/css" href="libs/page-css/baseNew.css"/>-->
+		<link rel="stylesheet" type="text/css" href="libs/page-css/login.css"/>
+		
+		<!-----js plugin----->
+		<script src="libs/jquery/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/yzm/js.KinerCode.js" type="text/javascript" charset="utf-8"></script>
+		<!-----auto js----->
+		<script src="libs/mycookie/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/yzm/yzm.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/page-js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/page-js/login.js" type="text/javascript" charset="utf-8"></script>		
+	</head>
+	<body>
+		<!--头部开始-->
+		<div class="header2"></div>
+		<!--头部结束-->
+		<div class="bgcolor">
+			<div class="login_center clearfix">
+				<div class="login_in fr">
+					<h1>欢迎登录</h1>
+					<div id="error_msg" class="pngfix error">请输入登录密码</div>
+					<ul class="clearfix">
+						<!--用户名-->
+						<li>
+							<div class="login_tips ltips01">
+								<label>用户名</label>
+								<input id="username" class="in_style" tabindex="1" type="text" style="border: 1px solid rgb(222,222,222);">
+								<i class="picPassWord"></i>
+							</div>
+						</li>
+						<!--密码-->
+						<li>
+							<div class="login_tips ltips02">
+								<label>密码</label>
+								<input id="userPass" class="in_style" tabindex="2" style="border: 1px solid rgb(222,222,222);" type="password">
+								<i class="picPassWord">
+							</div>
+						</li>
+						<!--验证码-->
+						<li id="capcode" class="clearfix">
+							<div>
+								<p>验证码</p>
+								<input id="checkCode" class="in_style width100 fl" type="text">
+								<a class="yz fl marTop_8" href="javascript:void(0);">
+									<span id="code" class="mycode"></span>
+								</a>							
+								<a class="change fl marTop_8" href="javascript:void(0);">换一换</a>
+							</div>
+						</li>
+						<li>
+							<label class="rememberMe">
+								<input id="rememberUserLoginInfo" checked="checked" type="checkbox">
+								记住账号
+							</label>
+						</li>
+					</ul>
+					<div class="btn_submit">
+						<input id="loginButton" class="input_sub login_btn" name="" value="立即登录" tabindex="3" type="button">
+					</div>
+					<div class="jiathis">
+						<p>使用合作网站账号登录</p>
+						<p>
+							<img src="sourse/img/login/qq.jpg" style="cursor: pointer;">
+							<img src="sourse/img/login/xunLei.png" style="cursor: pointer;">
+						</p>
+					</div>
+					<div class="msg clearfix">
+						<span class="fl">
+							还不是寺库会员？
+							<a class="active" href="register.html">免费注册</a>
+						</span>
+						<span class="fr">
+							<a href="javascript:void(0);" target="_blank">忘记密码</a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="n-footer"></div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,182 @@
+body{
+	background: #FDF8F4 url(../../sourse/img/register/login_03.jpg) no-repeat center top;
+}
+.bgcolor{
+	padding: 30px 0;
+}
+.reg_box{
+	width: 1200px;
+	margin: 0 auto;
+	height: 720px;
+}
+/*注册框样式*/
+.reg_center{
+	width: 310px;
+	padding: 30px 35px;
+	float: right;
+	background-color: #fff;
+	margin-top: 80px;
+	position: relative;
+}
+.tab_phone ul{
+}
+.tab_phone ul li{
+}
+/*提示信息*/
+.regTips{
+	width: 100%;
+}
+/*输入框*/
+.zindex{
+	z-index: 2;
+}
+/*手机号输入*/
+.login_tips{
+	position: relative;
+	z-index: 1;
+}
+.t_right{
+	width: 60px;
+	height: 40px;
+	line-height: 40px;
+	color: #666;
+	float: left;
+}
+.reg_box .reg_in{
+	width: 298px;
+	height: 20px;
+	line-height: 20px;
+	padding: 10px 5px;
+	border: 1px solid #dedede;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: "microsoft yahei";
+	border-radius: 0;
+	transition: border linear .2s,box-shadow linear; .2s; 
+}
+/*隐藏*/
+#autoShow{
+	width: 350px;
+	line-height: 22px;
+	border: #EBEBEB solid 1px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 40px;
+	z-index: 55;
+	display: none;
+}
+/*隐藏结束*/
+
+/*隐藏的 email_show 验证码*/
+.tel_show,.email_show,.again_pass,.tel_c,.email_c{
+	display: none;
+}
+.reg_box .reg_ins{
+	width: 115px;
+}
+.yz{
+	width: 70px;
+	height: 24px;
+	margin: 13px 0 0 10px;
+	display: inline;
+}
+.change{
+	height: 20px;
+	line-height: 20px;
+	margin: 15px 0 0 10px;
+	color: #666;
+}
+/*隐藏的email_show 验证码 结束*/
+/*短信验证码*/
+.phoneNumberCode{
+	padding-top: 12px;
+	clear: both;
+	position: relative;
+	display: none;
+}
+.btnStyle01{
+	margin: 8px 0 0 5px;
+}
+.phoneNumberCode .btnStyle01{
+	margin-top: 1px;
+}
+/*短信验证码结束*/
+/*密码框*/
+.focus{
+	color: #999;
+}
+.regName_tips{
+	width: 240px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	text-align: right;
+	font-family: "microsoft yahei";
+	display: none;
+}
+/*贵宾邀请码*/
+.blur{
+	color: red;
+	font-weight: bold;
+}
+.guibingma{
+	display: none;
+}
+/*注册按钮*/
+.btn_reg_submit{
+	padding-top: 10px;
+}
+.login_btn{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+.input_sub{
+	width: 100%;
+	background-color: #f19108;
+	border: 0;
+	cursor: pointer;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+}
+.f14{
+	font-size: 14px;
+	font-family: "microsoft yahei";
+}
+.protocol_check{
+	width: 100%;
+	height: 20px;
+	line-height: 20px;
+	padding: 5px 0;
+	color: #999;
+}
+.msg{
+	width: 100%;
+}
+.padTop30{
+	padding-top: 30px;
+}
+.btn_reg_submit p a{
+	color: #999;
+}
+.msg{
+	color:#999;
+}
+.msg a.active{
+	color: #f19108;
+}
+.iperror{
+	display: none;
+}
+.regName_tips {
+    width: 240px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    text-align: right;
+    font-family: "microsoft yahei";
+    display: block;
+}

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!-----css framework----->
+		
+		<!-----css auto----->
+		<link rel="stylesheet" type="text/css" href="libs/page-css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="libs/page-css/detail.css"/>
+		
+		<!-----js plugin----->
+		<script src="libs/jquery/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-----auto js----->
+		<script src="libs/mycookie/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/page-js/count.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/page-js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="libs/page-js/detail.js" type="text/javascript" charset="utf-8"></script>		
+	
+		<script type="text/javascript">
+		</script>
+	</head>
+	<body>
+		<div class="header"></div>
+		<div class="detailCon">
+			<!--导航部分-->
+			<div class="smallNav">
+				<p>
+					<a href="index.html">首页</a>>
+					<a href="javascript:;">包袋</a>>
+					<a href="javascript:;">钱包</a>>
+					<a href="javascript:;">普罗达</a>>
+					<a href="javascript:;">PRADA/普罗达 钱包 男士</a>
+				</p>
+				<span>商品编码：15149376</span>
+			</div>
+			<!--商品详情内容 开始-->
+			<div class="contents clearfix">
+				<div class="info_l">
+					<dl class="clearfix" id="imgshow">
+						<dd>
+							<div class="move_box">
+								<div>
+									<a class="imgselect on" href="javascript:;">
+										<img src="sourse/img/detail/deli01.JPG" width="80px" height="80px">
+										<i></i>
+									</a>
+									<a href="javascript:;">
+										<img src="sourse/img/detail/deli02.JPG" width="80px" height="80px">
+									</a>
+									<a href="javascript:;">
+										<img src="sourse/img/detail/deli03.JPG" width="80px" height="80px">
+									</a>
+									<a href="javascript:;">
+										<img src="sourse/img/detail/deli04.JPG" width="80px" height="80px">
+									</a>
+								</div>
+							</div>
+						</dd>
+						<dt>
+							<img class="jqzoom" src="sourse/img/detail/de1.JPG" width="400" height="400">
+							<div class="zoomspan"></div>
+						</dt>
+					</dl>
+					<div class="share_box clearfix">
+						<div class="share_text fl">
+							<span class="sh1">
+								<i></i>
+								<a href="javascript:;" target="_blank">正品保障</a>
+							</span>
+							<span class="sh2">
+								<i></i>
+								<a href="javascript:;" target="_blank">七天退换</a>
+							</span>
+							<span class="sh3">
+								<i></i>
+								<a href="javascript:;" target="_blank">权威质检</a>
+							</span>
+						</div>
+						<div class="share_icon fl" id="shareProduct">
+							<span class="sh4">
+								<a href="javascript:;" id="share">
+									<i></i>
+									分享
+								</a>
+							</span>
+							<div class="bdsharebuttonbox share_c bdshare-button-style0-16" style="display: none;">
+								<a class="bds_tsina"></a>
+								<a class="bds_sqq"></a>
+								<a class="bds_qzone"></a>
+							</div>
+						</div>
+						<div class="live_icon fl">
+							<span class="sh5">
+								<a href="javascript:;" class="collection fl">
+									<i></i>
+									收藏商品
+								</a>								
+							</span>
+								
+						</div>
+					</div>
+				</div>
+				<!--右-->
+				<div class="info_r">
+					<!--商品名-->
+					<div class="proName">
+						<h2>PRADA/普拉达  钱包 男士</h2>
+						<h3 id="subHeadSpan">
+							<a href="javascript:;">更多惊喜尽在PRADA寺库旗舰店</a>
+						</h3>
+					</div>
+					<!--商品详情 proDetails-->
+					<div class="proDetails" id="proDetails">
+						<div class="proList clearfix">
+							<div id="secooNameJs" class="pdt fl" style="line-height: 42px;height: 33px;">
+								寺库价
+							</div>
+							<div class="pdd fl" style="min-height: 32px;height: auto;">
+								<strong class="Dprice">
+									<b>
+										<span class="rmb">
+											￥
+										</span>
+									</b>
+								</strong>
+								<strong class="Dprice" id="secooPriceJs">4475</strong>
+								<span class="sale" style="display: none;"></span>
+								<span class="mprice" style="display: none;">
+									<span class="rmb">￥</span>>
+									<span class="rmb" style="font-family: tahoma;"></span>
+								</span>
+								<div class="mtips">
+									本商品到香港Secoo自提立减<b>49.22</b>元
+								</div>
+							</div>
+						</div>
+						
+						<!--预热活动价-->
+						<!--隐藏部分-->
+						<div class="proList clearfix" id="tempActivityDiv" style="display: none;"></div>
+						<div class="proList clearfix" id="promotionInfoSpan" style="display: none;"></div>
+						<!--显示部分-->
+						<div class="proList clearfix" id="inventoryDiv">
+							<div class="pdt fl">发货地</div>
+							<div class="pdd fl">
+								<div class="tips_hover">
+									<span class="fl"><em id="location-t"></em><i id="youhuo">有货</i></span>
+								</div>
+								<span class="delivery">
+									<i>预计<span class="color9d0">7-15</span></i>个工作日内送达
+								</span>
+								<div class="tips_delivery"></div>
+							</div>
+						</div>
+						<div class="proList clearfix">
+							<div class="pdt fl">温馨提示</div>
+							<div class="fdd fl" id="specialSign">
+								<span>本商品无质量问题不支持退换货</span>
+								<br>
+							</div>
+						</div>
+						<!--隐藏部分-->
+						<div class="elseP" style="display: none;">
+							<h5>相关商品</h5>
+						</div>
+					</div>
+					<!--proList_box -->
+					<div class="proList_box clearfix">
+						<!--多规格start-->
+						<div class="proList clearfix psize" id="colorSpec">
+							<div class="pdt fl" id="flagColor1">颜色</div>
+							<div class="pdd fl">
+								<ul>
+									<li class="on">
+										<a href="javascript:;">
+											<span>
+												<img src="sourse/img/detail/deproli.JPG" title="黑色" width="30" height="30">
+											</span>
+										</a>
+										<label></label>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<!--隐藏-->
+						<div class="proList clearfix psize" id="otherSpec" style="display: none;"></div>
+						<!--多规格end-->
+						
+						<!--购买数量-->
+						<div class="proList clearfix pNum">
+							<div class="pdt fl">购买数量</div>
+							<div class="pdd fl">
+								<div class="countNm">
+									<a href="javascript:;" class="down fl" id="subProduct" onclick="productCarOper('sub')"></a>
+									<span class="num fl">
+										<input type="text" onblur="chechCarOper()" id="buyNumVal" value="1">
+									</span>
+									<a href="javascript:;" class="up fl" id="addProduct" onclick="productCarOper('add')"></a>									
+								</div>
+								<span class="delivery" id="lastProductNum">
+									仅剩 <span class="color9d0">4</span> 件，抓紧时间购买哦！
+								</span>
+							</div>
+						</div>
+						<div class="prompt clearfix pselected"></div>
+						<div class="prompt clearfix">
+							<a href="javascript:;" class="topanic fl" id="addBindCar" title="立即抢购"></a>
+							<a href="javascript:;" class="tocart fl" id="addCarInfo" title="加入购物车"></a>
+							<a href="javascript:;" class="staging fl" id="addfq"><i></i>分期支付</a>								
+						</div>
+					</div>
+					<div class="proList_icon clearfix">
+						<div class="prompt"></div>
+					</div>
+				</div>
+			</div>
+			<!--商品详情内容 结束-->
+			<!--其他隐藏内容-->
+			<input type="hidden" secoopid="bag0001" secoopty="bag"/>
+			<!--加入购物车弹出层-->
+			<div class="love_tips popwinBox_jrgwc" style="block">
+				<div class="love_tips_title">
+					加入购物车成功
+					<a class="winboxClose" href="javascript:;"></a>
+				</div>
+				<div class="love_tips_text">添加成功</div>
+				<div class="love_tips_btn">
+					<a class="toCart" href="cart.html" target="_blank">去购物车结算</a>
+					<a class="buy" href="javascript:;">继续购物</a>
+				</div>
+			</div>
+			<!--第三块 开始-->
+			<div class="showAdds clearfix" id="showAdds">
+				<div class="showAddsLeft fl">
+					<h3>大家都在买</h3>
+					<div class="showLeftCon showLeftCon02" id="togeterBuy">
+						<ul>
+							<li class="clearfix">
+								<div class="sPic fl">
+									<img src="sourse/img/detail/togetherBuy01.jpg">
+								</div>
+								<div class="sbox fr">
+									<div class="sName">LONGINES/浪琴名匠自动机械男表(L2.793.4.78.3)</div>
+									<div class="sPri"><strong>￥<span class="rmb">1350</span></strong></div>
+								</div>
+								<a href="javascript:;"></a>
+							</li>
+							<li class="clearfix"></li>
+							<li class="clearfix"></li>
+							<li class="clearfix"></li>
+							<li class="clearfix"></li>
+						</ul>
+					</div>
+					<h3 class="marTop_15">相关商品</h3>
+					<div class="showLeftCon showLeftCon02" id="relateProduct">
+						
+					</div>
+					<h3 class="marTop_15">最近浏览的商品</h3>
+					<div class="showLeftCon showLeftCon02" id="lastBroswerProduct">
+						
+					</div>
+				</div>
+				<div class="showAddsRight fr">
+					<div class="s-left-banner" style="display: none;"></div>
+					
+					<div class="s-left-list" id="firstNav">
+						<ul>
+							<li class="link-suit-select">
+								<a href="javascript:;">商品详情</a>
+							</li>
+							<li>
+								<a href="javascript:;">商品鉴定</a>
+							</li>
+							<li>
+								<a href="javascript:;">售后服务</a>
+							</li>
+							<li>
+								<a href="javascript:;">购买须知</a>
+							</li>
+							<li>
+								<a href="javascript:;" id="secondCart" class="to_cart" title="加入购物车" style="display: block;"></a>
+								<a href="javascript:;" class="to_cart_end">售罄</a>
+							</li>
+						</ul>
+					</div>
+						
+					<!--展示块-->
+					<div class="s-left-box" style="padding-top: 36px;">
+						<div class="product-detail-div clearfix" style="display: block;">
+							<div class="product-detail-banner">
+								<img height="60" width="911" src="sourse/img/detail/product-detail01.jpg" class="lazy" style="display: inline;">
+							</div>
+							<div class="moudle_details">
+								<div class="moudle_top">
+									<span class="sp_show">商品展示</span>
+									<p>secoo.com</p>
+								</div>
+								<p style="text-align: center;">
+									<strong>
+										<img src="sourse/img/detail/dImgshow01.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow02.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow03.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow04.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow05.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow06.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow07.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow08.jpg" style="display: inline;">
+										<img src="sourse/img/detail/dImgshow09.jpg" style="display: inline;">
+									</strong>
+								</p>
+							</div>
+						</div>
+					</div>
+						
+					<!--评论块-->
+					<div class="detail_comment" id="detail_comment">
+						<div class="dc_title">
+							<ul class="clearfix">
+								<li class="">
+									<a href="javascript:void(0);" id="commentCount">该商品评价（0）</a>
+								</li>
+								<li class="on">
+									<a href="javascript:void(0);" id="currentBrandCommentCount">同品牌评价（477）</a>
+								</li>
+							</ul> 
+						</div>
+						<div class="dc_cont dc_cont_none">
+							<!--暂无评价-->
+							<div class="dc_score clearfix" style="display: none;">
+					        	<div class="fl zhpf">综合评分</div><i class="fl">|</i>
+					            <div class="fl star_d" id="commentSumCore"><span class="star4"><em style="width:0"><em></em></em></span></div><div class="fl zhpf">暂无评价</div>
+					            <div class="fr">
+					                <a class="pl_btn_red" id="fbcomment" target="_blank" href="http://my.secoo.com/comment/comment.jsp?productId=15149376">发表评价</a>
+					            </div>
+		        			</div>
+		        			<!--商品评价-->
+		        			<div class="dc_c_pl">
+		        				<ul class="dc_c_t clearfix">
+		        					<li class="on">
+		        						<a href="javascript:void(0);" id="allCommentCount">全部（477）</a>
+		        					</li>
+		        					<li>
+		        						<a href="javascript:void(0);" id="allImgCommentCount">有图评价(30)</a>
+		        					</li>
+		        				</ul>
+		        				<div class="dc_list" id="comment_show">
+		        				</div>
+		        			</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--第三块结束-->
+		</div>
+		<div class="footer">
+			<div class="n-footer"></div>
+		</div>
+	</body>
+</html>
